@@ -9,4 +9,4 @@ This repository is public for transparency and archival purposes.
 It is **not intended for reuse, redistribution, or adaptation**.
 
 Copyright  
-© 2026 Lukáš Nox // WQON. All Rights Reserved.
+© 2026 Lukáš "WQON" Nox. All Rights Reserved.
