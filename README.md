@@ -2,7 +2,8 @@
 A personal gateway connecting my worlds of pixel art, type design, and web development.  
 This project serves as the architectural core of my online identity.
 
-You can see the lkinkhub here —> [https://wqon-link/](https://wqon-link/)
+Check the linkhub at [https://wqon-link/](https://wqon-link/).
+
 
 ## Status
 This repository is public for transparency and archival purposes.  
