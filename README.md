@@ -3,8 +3,8 @@ A personal gateway connecting my worlds of pixel art, type design, and web devel
 This project serves as the architectural core of my online identity.
 
 Check the linkhub at [https://wqon.link/](wqon.link).
-\
-\
+ \
+ \
 ## Status
 This repository is public for transparency and archival purposes.  
 It is **not intended for reuse, redistribution, or adaptation**.
