@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Head from "../components/head.astro";
+import Links from "../components/links.astro";
+import Drake from "../components/drake.astro";
+---
+
+<!-- Designed and developed with <3 by Lukáš "WQON" Nox. For technical details see: https://github.com/wqon/wqon-link -->
+<html>
+    <Head
+        pageTitle="WQON [vekonn]"
+        pageDesc="A gateway to my world of pixel art, type design and open-source tools."
+        ogTitle="Discover the pixel‑crafted universe of WQON"
+        ogDesc="Explore my pixel art, type design, and open‑source tools in one unified gateway."
+    />
+    <body>
+        <main>
+            <section class="wrapper">
+                <div class="left">
+                    <Drake />
+                </div>
+                <div class="right">
+                    <Links />
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
