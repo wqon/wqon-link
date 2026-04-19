@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import Head from "../components/head.astro";
-import Links from "../components/links.astro";
 import Drake from "../components/drake.astro";
 ---
 
@@ -20,7 +19,7 @@ import Drake from "../components/drake.astro";
                     <Drake />
                 </div>
                 <div class="right">
-                    <Links />
+                    <slot />
                 </div>
             </section>
         </main>
