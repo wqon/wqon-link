@@ -1,5 +1,5 @@
 {
-  "name": "WQON Links",
+  "name": "WQON [vekonn]",
   "short_name": "WQON",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#0c18c0",
-  "background_color": "#0c18c0",
+  "theme_color": "#f96280",
+  "background_color": "#f96280",
   "display": "standalone"
 }
