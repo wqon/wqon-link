@@ -1,0 +1,29 @@
+.cursor {
+    height: 7px;
+    width: 7px;
+    background: transparent url("/assets/cursor.png") 0 0 no-repeat;
+    image-rendering: pixelated;
+    position: fixed;
+    transform: scale(3);
+    pointer-events: none;
+    z-index: 100;
+}
+.cursor.pointer {
+    height: 7px;
+    width: 11px;
+    background-position: -7px 0;
+}
+.cursor.tickling {
+    height: 7px;
+    width: 38px;
+    background-position: -18px 0;
+    animation: Tickle 800ms steps(8) infinite;
+}
+@keyframes Tickle {
+    from {
+        background-position: -18px 0;
+    }
+    to {
+        background-position: -322px 0;
+    }
+}
