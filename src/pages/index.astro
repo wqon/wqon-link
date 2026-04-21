@@ -1,8 +1,13 @@
 ---
 import Global from "../layouts/global.astro";
 import Links from "../components/links.astro";
+import Drake from "../components/modules/drake.astro";
+import About from "../components/modules/about.astro";
+import Newsletter from "../components/modules/subscribe.astro";
+import Donate from "../components/modules/donate.astro";
 ---
 
 <Global>
-    <Links />
+    <Links slot="right" />
+    <Drake slot="left" />
 </Global>
