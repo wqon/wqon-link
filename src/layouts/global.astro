@@ -1,25 +1,26 @@
 ---
 import "../styles/global.css";
+import "../styles/cursor.css";
 import Head from "../components/head.astro";
-import Drake from "../components/drake.astro";
 ---
 
-<!-- Designed and developed with <3 by Lukáš "WQON" Nox. --><!-- For technical details see: https://github.com/wqon/wqon-link -->
 <html lang="en">
+    <!-- Designed and developed with <3 by Lukáš "WQON" Nox. --><!-- For technical details see: https://github.com/wqon/wqon-link -->
     <Head
-        pageTitle="WQON [vekonn] | Pixel, Type & Dev"
+        pageTitle="WQON [vekonn] - Pixel, Type & Dev"
         pageDesc="A gateway to my world of pixel art, type design and open-source tools."
         ogTitle="Discover the pixel‑crafted universe of WQON"
         ogDesc="Explore my pixel art, type design, and open‑source tools in one unified gateway."
     />
     <body>
+        <div class="cursor"></div>
         <main>
             <section class="wrapper">
                 <div class="left">
-                    <Drake />
+                    <slot name="left" />
                 </div>
                 <div class="right">
-                    <slot />
+                    <slot name="right" />
                 </div>
             </section>
         </main>
