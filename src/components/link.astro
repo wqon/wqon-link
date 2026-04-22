@@ -1,0 +1,10 @@
+---
+const { link, linkSrc, linkAlt } = Astro.props;
+---
+
+<nav data-cursor="pointer">
+    <a href={link}>
+        <img class="static" src=`/assets/${linkSrc}` alt={linkAlt} />
+        <img class="hover" src=`/assets/hover/${linkSrc}` alt={linkAlt} />
+    </a>
+</nav>

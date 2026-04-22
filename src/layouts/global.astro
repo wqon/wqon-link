@@ -15,14 +15,7 @@ import Head from "../components/head.astro";
     <body>
         <div class="cursor"></div>
         <main>
-            <section class="wrapper">
-                <div class="left">
-                    <slot name="left" />
-                </div>
-                <div class="right">
-                    <slot name="right" />
-                </div>
-            </section>
+            <slot />
         </main>
     </body>
 </html>
