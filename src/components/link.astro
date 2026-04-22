@@ -1,10 +1,9 @@
 ---
-const { link, linkSrc, linkAlt } = Astro.props;
+const { link, src, alt, blank } = Astro.props;
+const target = blank ? "_blank" : undefined;
 ---
 
-<nav data-cursor="pointer">
-    <a href={link}>
-        <img class="static" src=`/assets/${linkSrc}` alt={linkAlt} />
-        <img class="hover" src=`/assets/hover/${linkSrc}` alt={linkAlt} />
-    </a>
-</nav>
+<a href={link} target={target} data-cursor="pointer">
+    <img class="static" src=`/assets/${src}` alt={alt} />
+    <img class="hover" src=`/assets/hover/${src}` alt={alt} />
+</a>
