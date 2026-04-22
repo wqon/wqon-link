@@ -23,6 +23,7 @@
 .drake {
     display: block;
     position: relative;
+    padding-bottom: var(--gap32);
 }
 .drake #metadata {
     position: absolute;
@@ -36,7 +37,7 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    transform: translateX(210%) translateY(180%);
+    transform: translateX(216%) translateY(176%);
     transition: opacity 1s ease;
 }
 .drake:hover #bubble {
