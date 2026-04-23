@@ -3,6 +3,7 @@ import "../styles/links.css";
 import Drake from "../components/drake.astro";
 import Header from "../components/header.astro";
 import Link from "../components/link.astro";
+import Subscribe from "../components/subscribe.astro";
 ---
 
 <section class="wrapper">
@@ -49,11 +50,7 @@ import Link from "../components/link.astro";
                 src="contact.png"
                 alt="Contact (new tab)"
             />
-            <Link
-                link="#subscribe"
-                src="subscribe.png"
-                alt="Subscribe (popup)"
-            />
+            <Subscribe />
             <Link
                 link="https://bsky.app/profile/wqon.art"
                 src="bluesky.png"
@@ -79,9 +76,9 @@ import Link from "../components/link.astro";
                 blank
             />
             <Link
-                link="#donate"
+                link="https://wqon.art/donate/"
                 src="donate.webp"
-                alt="Feed the Drake’s Jar (popup)"
+                alt="Feed the Drake’s Jar (direct link)"
             />
         </nav>
     </div>

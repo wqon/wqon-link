@@ -1,8 +1,7 @@
-/* LAYOUT */
 .wrapper {
     height: 100dvh;
     display: grid;
-    grid-template-columns: 482.5px 330px;
+    grid-template-columns: calc(193px * var(--x)) calc(120px * var(--y));
     grid-template-rows: auto;
     justify-content: center;
     align-items: center;
@@ -17,34 +16,4 @@
     grid-column: 2;
     grid-row: 1;
     padding: var(--gap32) 0;
-}
-
-/* DRAKE */
-.drake {
-    display: block;
-    position: relative;
-    padding-bottom: var(--gap32);
-}
-.drake #metadata {
-    position: absolute;
-    opacity: 0;
-}
-.drake:active #metadata {
-    opacity: 1;
-}
-#bubble {
-    width: 190px;
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transform: translateX(216%) translateY(176%);
-    transition: opacity 1s ease;
-}
-.drake:hover #bubble {
-    opacity: 1;
-    transition-delay: 2.5s;
-}
-.drake:not(:hover) #bubble {
-    opacity: 0;
-    transition-delay: 0.25s;
 }
