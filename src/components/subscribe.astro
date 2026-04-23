@@ -1,0 +1,61 @@
+---
+import "../styles/subscribe.css";
+---
+
+<div id="subscribe" data-cursor="pointer">
+    <a href="#">
+        <img class="static" src="/assets/subscribe-close.png" alt="Close" />
+        <img
+            class="hover"
+            src="/assets/hover/subscribe-close.png"
+            alt="Close"
+        />
+    </a>
+    <form class="subscribeForm" action="/subscribe" method="POST">
+        <>
+            <input class="tag" type="hidden" name="tag" value="link" />
+            <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="myemail@example.com"
+                autocomplete="off"
+                required
+                data-cursor="text"
+            />
+        </><!--
+        -->
+        <>
+            <button class="submit" type="submit">
+                <img
+                    class="static"
+                    src="/assets/subscribe-submit.png"
+                    alt="Subscribe (submit)"
+                />
+                <img
+                    class="hover"
+                    src="/assets/hover/subscribe-submit.png"
+                    alt="Subscribe (submit)"
+                />
+            </button>
+        </>
+    </form>
+</div>
+
+<a id="subscribed" href="#subscribe" data-cursor="pointer">
+    <img class="static" src="/assets/subscribed.webp" alt="Thanks! <3" />
+    <img
+        class="hover"
+        src="/assets/hover/subscribed.png"
+        alt="Subscribe (section)"
+    />
+</a>
+
+<a class="subscribe" href="#subscribe" data-cursor="pointer">
+    <img class="static" src="/assets/subscribe.png" alt="Subscribe (section)" />
+    <img
+        class="hover"
+        src="/assets/hover/subscribe.png"
+        alt="Subscribe (section)"
+    />
+</a>

@@ -1,0 +1,31 @@
+#subscribe,
+#subscribed,
+#subscribe:target ~ :is(.subscribe, #subscribed),
+#subscribed:target ~ :is(.subscribe, #subscribe) {
+    display: none;
+}
+
+#subscribe:target {
+    display: grid;
+    grid-template-columns: calc(45px * var(--y)) calc(75px * var(--y));
+}
+.subscribeForm {
+    display: inline-flex;
+}
+.email {
+    width: calc(64px * var(--y));
+    background: url("/assets/subscribe-form.png") no-repeat center/contain;
+    image-rendering: pixelated;
+    padding: 0 0.4rem;
+    padding-top: 0.1rem;
+}
+.email:is(:hover, :focus) {
+    background: url("/assets/hover/subscribe-form.png") no-repeat center/contain;
+}
+.submit {
+    width: calc(11px * var(--y));
+}
+
+#subscribed:target {
+    display: block;
+}
