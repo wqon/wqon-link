@@ -13,17 +13,22 @@
     width: 11px;
     background-position: -7px 0;
 }
+.cursor.text {
+    height: 7px;
+    width: 5px;
+    background-position: -18px 0;
+}
 .cursor.tickling {
     height: 7px;
     width: 38px;
-    background-position: -18px 0;
+    background-position: -23px 0;
     animation: Tickle 800ms steps(8) infinite;
 }
 @keyframes Tickle {
     from {
-        background-position: -18px 0;
+        background-position: -23px 0;
     }
     to {
-        background-position: -322px 0;
+        background-position: -327px 0;
     }
 }
