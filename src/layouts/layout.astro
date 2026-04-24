@@ -1,6 +1,6 @@
 ---
-import "../styles/cursor.css";
 import Head from "../components/head.astro";
+import Loader from "../components/loader.astro";
 ---
 
 <html lang="en">
@@ -12,6 +12,7 @@ import Head from "../components/head.astro";
         ogDesc="Explore my pixel art, type design, and open‑source tools in one unified gateway."
     />
     <body>
+        <Loader />
         <div class="cursor"></div>
         <main>
             <slot />
