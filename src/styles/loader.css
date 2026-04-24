@@ -1,0 +1,59 @@
+.loader {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    background: var(--black);
+    animation: 0.5s ease forwards fromBlack;
+    inset: 0;
+    z-index: 128;
+    opacity: 1;
+    visibility: visible;
+    transform: unset;
+}
+.loading {
+    width: calc(112px * var(--z));
+    height: auto;
+}
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition:
+        opacity 1s 1s ease-in,
+        visibility 0s 2s,
+        transform 0s 2s;
+}
+
+main {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.loaded-content {
+    opacity: 1;
+    transform: unset;
+    transition:
+        opacity 2s ease-in,
+        transform 3s ease-out;
+}
+.from-left {
+    animation: 6s ease-out forwards fromLeft;
+}
+
+@keyframes fromBlack {
+    from {
+        background: var(--black);
+    }
+    to {
+        background: var(--orange);
+    }
+}
+@keyframes fromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: unset;
+    }
+}
