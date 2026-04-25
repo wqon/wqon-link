@@ -1,6 +1,8 @@
 ---
 import Head from "../components/head.astro";
 import Loader from "../components/loader.astro";
+import Drake from "../components/drake.astro";
+import Header from "../components/header.astro";
 ---
 
 <html lang="en">
@@ -15,7 +17,17 @@ import Loader from "../components/loader.astro";
         <Loader />
         <div class="cursor"></div>
         <main>
-            <slot />
+            <section class="wrapper">
+                <div class="left">
+                    <Drake />
+                </div>
+                <div class="right">
+                    <Header />
+                    <nav>
+                        <slot />
+                    </nav>
+                </div>
+            </section>
         </main>
     </body>
 </html>
