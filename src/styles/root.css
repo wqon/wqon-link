@@ -119,10 +119,11 @@ button {
 }
 @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
     :root {
+        --y: 2.5;
         --z: 2.6;
     }
     .wrapper {
-        grid-template: max-content max-content / 1fr;
+        grid-template: max-content max-content / calc(120px * var(--y));
         align-items: normal;
         gap: 0;
         transform: none;
