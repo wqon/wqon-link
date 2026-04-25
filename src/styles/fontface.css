@@ -1,0 +1,8 @@
+@font-face {
+    font-family: minibyte;
+    src: url("/assets/minibyte-regular.woff2"), format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-feature-settings: "salt";
+    font-display: swap;
+}
