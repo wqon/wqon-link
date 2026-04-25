@@ -1,21 +1,21 @@
 {
-  "name": "WQON [vekonn]",
+  "name": "WQON - Pixel, Type & Dev",
   "short_name": "WQON",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "/web-app-manifest-192x192.png?v=20260425",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "/web-app-manifest-512x512.png?v=20260425",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#f96280",
+  "theme_color": "#63abff",
   "background_color": "#f96280",
   "display": "standalone"
 }
