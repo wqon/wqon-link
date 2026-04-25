@@ -8,6 +8,7 @@
 #subscribe:target {
     display: grid;
     grid-template-columns: calc(45px * var(--y)) calc(75px * var(--y));
+    scroll-margin-top: var(--gap64);
 }
 .subscribeForm {
     display: inline-flex;
@@ -28,4 +29,5 @@
 
 #subscribed:target {
     display: block;
+    scroll-margin-top: var(--gap64);
 }

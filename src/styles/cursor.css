@@ -32,3 +32,9 @@
         background-position: -327px 0;
     }
 }
+
+@media /* mobile behavior */ (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}

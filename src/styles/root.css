@@ -21,17 +21,9 @@
     color: var(--red);
 }
 
-@font-face {
-    font-family: minibyte;
-    src: url("/assets/minibyte-regular.woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-feature-settings: "salt";
-}
-
 * {
     width: 100%;
-    max-width: 100%;
+    max-width: 100svw;
     height: auto;
     box-sizing: border-box;
     scrollbar-color: var(--darkblue) transparent;
@@ -49,15 +41,35 @@ html {
     letter-spacing: 0.05rem;
 }
 body {
-    width: 100%;
-    height: 100%;
     background: var(--softblue);
     color: var(--darkblue);
-    overflow-x: hidden;
 }
 main {
     white-space: normal;
     word-break: break-word;
+    overflow-x: hidden;
+}
+
+/* LAYOUT */
+.wrapper {
+    min-height: 100svh;
+    display: grid;
+    grid-template: auto / calc(193px * var(--x)) calc(120px * var(--y));
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap64);
+    transform: translateX(calc(0px - var(--gap64)));
+}
+.left {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+.right {
+    grid-column: 2;
+    grid-row: 1;
+    padding: var(--gap32) 0;
+    z-index: 2;
 }
 
 /* ELEMENTS */
@@ -69,6 +81,7 @@ img {
 .hover {
     display: none;
 }
+
 a {
     display: block;
 }
@@ -91,9 +104,56 @@ input {
 input::placeholder {
     color: var(--violet);
 }
+
 button {
     color: transparent;
     background: transparent;
     outline: none;
     border: none;
+}
+
+@media /* mobile behavior */ (pointer: coarse) {
+    * {
+        cursor: auto;
+    }
+}
+@media /* mobile */ (min-width: 1px) and (max-width: 768px) {
+    :root {
+        --z: 2.6;
+    }
+    .wrapper {
+        grid-template: max-content max-content / 1fr;
+        align-items: normal;
+        gap: 0;
+        transform: none;
+        padding: var(--gap32);
+        padding-bottom: 0;
+    }
+    .left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .right {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 0;
+    }
+}
+@media /* tablet */ (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --x: 2;
+        --y: 2.2;
+        --z: 3.4;
+    }
+    .wrapper {
+        gap: var(--gap32);
+        transform: translateX(calc(0px - var(--gap32)));
+    }
+}
+@media /* notebook */ (min-width: 1025px) and (max-width: 1440px) {
+    :root {
+        --x: 2.2;
+        --y: 2.4;
+        --z: 3.6;
+    }
 }
