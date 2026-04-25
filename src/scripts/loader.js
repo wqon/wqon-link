@@ -1,4 +1,4 @@
-addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".loader").classList.add("loaded");
   setTimeout(() => {
     document.querySelector("main").classList.add("loaded-content");
