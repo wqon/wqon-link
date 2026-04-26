@@ -127,7 +127,7 @@ button {
         align-items: normal;
         gap: 0;
         transform: none;
-        padding: var(--gap32);
+        padding: var(--gap32) 0;
         padding-bottom: 0;
     }
     .left {
