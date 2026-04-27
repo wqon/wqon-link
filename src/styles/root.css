@@ -21,8 +21,7 @@
     color: var(--red);
 }
 :focus {
-    outline: dotted 2px var(--white);
-    border-radius: 8px;
+    outline: none;
 }
 
 * {
