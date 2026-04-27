@@ -16,6 +16,9 @@ document
     if (res.ok) {
       window.location.hash = "subscribed";
     } else {
-      alert(data.error || "An error occurred. Try again later.");
+      const title = data.error?.title || "Error.";
+      const detail = data.error?.detail || "Something went wrong.";
+
+      alert(`${title}\n${detail}`);
     }
   });
