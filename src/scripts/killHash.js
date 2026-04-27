@@ -16,7 +16,7 @@ function killHash() {
       );
       document.getElementById("subscribed").style.display = "none";
       document.querySelector(".subscribe").style.display = "block";
-    }, 6000);
+    }, 8000);
   }
 }
 
