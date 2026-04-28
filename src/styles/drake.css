@@ -1,7 +1,7 @@
 .drake {
     display: block;
     position: relative;
-    padding-bottom: var(--gap32);
+    padding-bottom: var(--32);
 }
 .drake .metadata {
     position: absolute;
@@ -29,7 +29,6 @@
 
 @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
     .drake {
-        transform: translateY(calc(0px - var(--gap32))) !important;
         padding-bottom: 0;
     }
     .bubble {

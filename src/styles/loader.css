@@ -6,7 +6,7 @@
     position: fixed;
     inset: 0;
     background: var(--black);
-    animation: 0.5s ease forwards fromBlack;
+    animation: fromBlack 0.5s ease forwards;
     z-index: 128;
     opacity: 1;
     visibility: visible;
@@ -38,7 +38,7 @@ main {
         transform 3s ease-out;
 }
 .from-left {
-    animation: 6s ease-out forwards fromLeft;
+    animation: fromLeft 6s ease-out forwards;
 }
 
 @keyframes fromBlack {
