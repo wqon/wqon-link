@@ -1,18 +1,25 @@
 ---
-import "../styles/styles.css";
+import Scripts from "../scripts.astro";
 
 const { pageTitle, pageDesc, ogTitle, ogDesc } = Astro.props;
+const pageCanon = "https://wqon.link/";
 ---
 
 <head>
+    <meta charset="utf-8" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
-    <meta name="charset" content="utf-8" />
+    <meta name="author" content='Lukáš "WQON" Nox' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://wqon.link/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#63abff" />
+    <link rel="canonical" href={pageCanon} />
 
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDesc} />
+    <meta property="og:image" content="https://wqon.link/assets/og.png" />
+    <meta property="og:url" content={pageCanon} />
 
     <link
         rel="icon"
@@ -30,13 +37,6 @@ const { pageTitle, pageDesc, ogTitle, ogDesc } = Astro.props;
     <meta name="apple-mobile-web-app-title" content="WQON" />
     <link rel="manifest" href="/site.webmanifest?v=20260425" />
 
-    <script src="/src/scripts/loader.js"></script>
-    <script src="/src/scripts/cursor.js"></script>
-    <script src="/src/scripts/noDrag.js"></script>
-    <script src="/src/scripts/killHash.js"></script>
-    <script src="/src/scripts/subscribe.js"></script>
-    <script
-        data-goatcounter="https://wqonlink.goatcounter.com/count"
-        async
-        src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <Scripts />
 </head>
