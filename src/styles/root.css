@@ -7,13 +7,13 @@
     --orange: #ffba63;
     --red: #f96280;
     --white: #fffaf5;
+    --16: 1rem;
+    --32: 2rem;
+    --48: 3rem;
+    --64: 4rem;
     --x: 2.6;
     --y: 2.8;
     --z: 4;
-    --gap16: 1rem;
-    --gap32: 2rem;
-    --gap48: 3rem;
-    --gap64: 4rem;
 }
 
 ::selection {
@@ -46,11 +46,11 @@ html {
 body {
     background: var(--softblue);
     color: var(--darkblue);
+    overflow-x: hidden;
 }
 main {
     white-space: normal;
     word-break: break-word;
-    overflow-x: hidden;
 }
 
 /* LAYOUT */
@@ -60,8 +60,8 @@ main {
     grid-template: auto / calc(193px * var(--x)) calc(120px * var(--y));
     justify-content: center;
     align-items: center;
-    gap: var(--gap64);
-    transform: translateX(calc(0px - var(--gap64)));
+    gap: var(--64);
+    transform: translateX(calc(0px - var(--64)));
 }
 .left {
     grid-column: 1;
@@ -71,7 +71,7 @@ main {
 .right {
     grid-column: 2;
     grid-row: 1;
-    padding: var(--gap32) 0;
+    padding: var(--32) 0;
     z-index: 2;
 }
 
@@ -130,12 +130,13 @@ button {
         align-items: normal;
         gap: 0;
         transform: none;
-        padding: var(--gap32) 0;
+        padding: var(--32) 0;
         padding-bottom: 0;
     }
     .left {
         grid-column: 1;
         grid-row: 2;
+        transform: translateY(calc(0px - var(--32))) !important;
     }
     .right {
         grid-column: 1;
@@ -150,8 +151,8 @@ button {
         --z: 3.4;
     }
     .wrapper {
-        gap: var(--gap32);
-        transform: translateX(calc(0px - var(--gap32)));
+        gap: var(--32);
+        transform: translateX(calc(0px - var(--32)));
     }
 }
 @media /* notebook */ (min-width: 1025px) and (max-width: 1440px) {
