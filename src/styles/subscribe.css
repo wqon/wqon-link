@@ -31,3 +31,11 @@
     display: block;
     scroll-margin-top: var(--64);
 }
+
+.website {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    transform: translateX(-8192px);
+    overflow: hidden;
+}

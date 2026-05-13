@@ -10,6 +10,7 @@
     <form class="subscribeForm" action="/subscribe" method="POST">
         <>
             <input class="tag" type="hidden" name="tag" value="form" />
+            <input type="hidden" name="timestamp" value={Date.now()} />
             <input
                 class="email"
                 type="email"
@@ -20,6 +21,13 @@
                 data-cursor="text"
             />
         </><!--
+        -->
+        <input
+            class="website"
+            type="text"
+            name="website"
+            autocomplete="off"
+        /><!--
         -->
         <>
             <button class="submit" type="submit">
