@@ -1,5 +1,5 @@
 {
-  "name": "WQON - Pixel, Type & Dev",
+  "name": "Explore WQON",
   "short_name": "WQON",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#6b5cf5",
-  "background_color": "#6b5cf5",
+  "theme_color": "#ffba63",
+  "background_color": "#ffba63",
   "display": "standalone"
 }
