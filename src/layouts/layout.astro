@@ -1,6 +1,9 @@
 ---
+import "../lib/global.css";
+import "../lib/fontface.css";
 import Head from "../components/head.astro";
 import Loader from "../components/loader.astro";
+import Cursor from "../components/cursor.astro";
 import Drake from "../components/drake.astro";
 import Header from "../components/header.astro";
 ---
@@ -15,7 +18,7 @@ import Header from "../components/header.astro";
     />
     <body>
         <Loader />
-        <div class="cursor"></div>
+        <Cursor />
         <main>
             <section class="wrapper">
                 <div class="left">

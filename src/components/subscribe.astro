@@ -56,3 +56,75 @@
         alt="Subscribe (section)"
     />
 </a>
+
+<style>
+    #subscribe,
+    #subscribed,
+    #subscribe:target ~ :is(.subscribe, #subscribed),
+    #subscribed:target ~ :is(.subscribe, #subscribe) {
+        display: none;
+    }
+
+    #subscribe:target {
+        display: grid;
+        grid-template: max-content / calc(45px * var(--y)) calc(75px * var(--y));
+        scroll-margin-top: var(--64);
+    }
+    .subscribeForm {
+        display: inline-flex;
+    }
+    .email {
+        width: calc(64px * var(--y));
+        background: url("/assets/subscribe-form.png") no-repeat center/contain;
+        image-rendering: pixelated;
+        padding: 0 0.4rem;
+        padding-top: 0.1rem;
+    }
+    .email:is(:hover, :focus) {
+        background: url("/assets/hover/subscribe-form.png") no-repeat
+            center/contain;
+    }
+    .submit {
+        width: calc(11px * var(--y));
+    }
+
+    #subscribed:target {
+        display: block;
+        scroll-margin-top: var(--64);
+    }
+
+    .website {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        transform: translateX(-8192px);
+        overflow: hidden;
+    }
+</style>
+
+<script is:inline>
+    document
+        .querySelector(".subscribeForm")
+        .addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                window.location.hash = "subscribed";
+            } else {
+                const title = data.error?.title || "Error.";
+                const detail = data.error?.detail || "Something went wrong.";
+
+                alert(`${title}\n${detail}`);
+            }
+        });
+</script>
