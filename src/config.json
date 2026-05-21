@@ -33,7 +33,7 @@
       "link": "https://www.inprnt.com/gallery/wqonart/",
       "asset": "art-prints.png",
       "alt": "Art Prints (new tab)",
-      "blank": false,
+      "blank": true,
       "active": true
     },
     {
@@ -61,28 +61,28 @@
       "link": "https://bsky.app/profile/wqon.art",
       "asset": "bluesky.png",
       "alt": "Bluesky (new tab)",
-      "blank": false,
+      "blank": true,
       "active": true
     },
     {
       "link": "https://github.com/wqon",
       "asset": "github.png",
       "alt": "GitHub (new tab)",
-      "blank": false,
+      "blank": true,
       "active": true
     },
     {
       "link": "https://www.tumblr.com/wqonart",
       "asset": "tumblr.png",
       "alt": "Tumblr (new tab)",
-      "blank": false,
+      "blank": true,
       "active": true
     },
     {
       "link": "https://lospec.com/wqonart",
       "asset": "lospec.png",
       "alt": "Lospec (new tab)",
-      "blank": false,
+      "blank": true,
       "active": true
     },
     {
