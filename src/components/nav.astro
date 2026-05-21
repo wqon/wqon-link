@@ -1,0 +1,46 @@
+---
+import config from "../config.json";
+import Subscribe from "../components/subscribe.astro";
+---
+
+<header>
+    <a href="https://wqon.art/about/" data-cursor="pointer">
+        <img
+            class="static"
+            src="/assets/wqon.webp"
+            alt="WQON — Pixel Dracologist, Type Designer & Web Developer"
+        />
+        <img
+            class="hover"
+            src="/assets/hover/wqon.png"
+            alt="My Story (direct link)"
+        />
+    </a>
+</header>
+<nav>
+    {
+        config.links.map((link, i) => (
+            <>
+                {i === 7 && <Subscribe />}
+                {link.active && (
+                    <a
+                        href={link.link}
+                        target={link.blank ? "_blank" : "_self"}
+                        data-cursor="pointer"
+                    >
+                        <img
+                            class="static"
+                            src={`/assets/${link.asset}`}
+                            alt={link.alt}
+                        />
+                        <img
+                            class="hover"
+                            src={`/assets/hover/${link.asset}`}
+                            alt={link.alt}
+                        />
+                    </a>
+                )}
+            </>
+        ))
+    }
+</nav>

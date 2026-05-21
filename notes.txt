@@ -18,3 +18,9 @@
 
 @media /* tv, big screen */ (min-width: 1921px) {
 }
+
+
+ℹ️ CURSOR
+- pointer
+- text
+- tickling

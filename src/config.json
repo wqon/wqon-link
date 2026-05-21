@@ -6,5 +6,91 @@
   "og": {
     "title": "Discover the pixel‑crafted universe of WQON",
     "description": "Explore my pixel art, type design, and open‑source tools in one unified gateway."
-  }
+  },
+  "links": [
+    {
+      "link": "https://wqon.art/",
+      "asset": "portfolio.png",
+      "alt": "Portfolio (direct link)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://wqonart.itch.io/",
+      "asset": "pixel-fonts.png",
+      "alt": "Pixel Fonts (direct link)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://wqonart.itch.io/",
+      "asset": "pixel-assets.png",
+      "alt": "Pixel Assets (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://www.inprnt.com/gallery/wqonart/",
+      "asset": "art-prints.png",
+      "alt": "Art Prints (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://wqon.dev/",
+      "asset": "tools-apps.png",
+      "alt": "Tools & Apps (direct link)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://wqon.art/hire-me/",
+      "asset": "commissions.png",
+      "alt": "Commissions (direct link)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "mailto:hi@wqon.art",
+      "asset": "contact.png",
+      "alt": "Contact (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://bsky.app/profile/wqon.art",
+      "asset": "bluesky.png",
+      "alt": "Bluesky (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://github.com/wqon",
+      "asset": "github.png",
+      "alt": "GitHub (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://www.tumblr.com/wqonart",
+      "asset": "tumblr.png",
+      "alt": "Tumblr (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "https://lospec.com/wqonart",
+      "asset": "lospec.png",
+      "alt": "Lospec (new tab)",
+      "blank": false,
+      "active": true
+    },
+    {
+      "link": "/donate",
+      "asset": "donate.webp",
+      "alt": "Feed the Drake’s Jar (direct link)",
+      "blank": false,
+      "active": true
+    }
+  ]
 }
