@@ -1,23 +1,22 @@
 ---
-const { pageTitle, pageDesc, ogTitle, ogDesc } = Astro.props;
-const pageCanon = "https://wqon.link/";
+import config from "../config.json";
 ---
 
 <head>
     <meta charset="utf-8" />
-    <title>{pageTitle}</title>
-    <meta name="description" content={pageDesc} />
+    <title>{config.title}</title>
+    <meta name="description" content={config.description} />
     <meta name="author" content='Lukáš "WQON" Nox' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#63abff" />
-    <link rel="canonical" href={pageCanon} />
+    <meta name="theme-color" content={config.theme} />
+    <link rel="canonical" href={config.canon} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={ogTitle} />
-    <meta property="og:description" content={ogDesc} />
+    <meta property="og:title" content={config.og.title} />
+    <meta property="og:description" content={config.og.description} />
     <meta property="og:image" content="https://wqon.link/assets/og.png" />
-    <meta property="og:url" content={pageCanon} />
+    <meta property="og:url" content={config.canon} />
 
     <link
         rel="icon"
