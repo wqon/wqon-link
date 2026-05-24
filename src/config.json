@@ -27,7 +27,7 @@
       "asset": "pixel-assets.png",
       "alt": "Pixel Assets (new tab)",
       "blank": false,
-      "active": true
+      "active": false
     },
     {
       "link": "https://www.inprnt.com/gallery/wqonart/",
@@ -41,7 +41,7 @@
       "asset": "tools-apps.png",
       "alt": "Tools & Apps (direct link)",
       "blank": false,
-      "active": true
+      "active": false
     },
     {
       "link": "https://wqon.art/hire-me/",
