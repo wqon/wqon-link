@@ -9,7 +9,7 @@
   },
   "links": [
     {
-      "link": "https://wqon.art/",
+      "link": "https://ko-fi.com/wqonart/gallery",
       "asset": "portfolio.png",
       "alt": "Portfolio (direct link)",
       "blank": false,
@@ -44,7 +44,7 @@
       "active": false
     },
     {
-      "link": "https://wqon.art/hire-me/",
+      "link": "https://ko-fi.com/wqonart/commissions",
       "asset": "commissions.png",
       "alt": "Commissions (direct link)",
       "blank": false,
@@ -86,7 +86,7 @@
       "active": true
     },
     {
-      "link": "/donate",
+      "link": "https://ko-fi.com/wqonart",
       "asset": "donate.webp",
       "alt": "Feed the Drake’s Jar (direct link)",
       "blank": false,
