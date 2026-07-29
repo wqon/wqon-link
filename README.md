@@ -1,6 +1,9 @@
 # WQON’s Linkhub
-A personal gateway connecting my worlds of pixel art, type design, and web development.  
-This project serves as the architectural core of my online identity.
+A hand-crafted pixel art scene exported as individual assets, and then transformed into an interactive, vibrant website that looks and feels like the main menu of a tiny indie game.
 
-Assets: Copyright © 2026 WQON. All rights reserved.
+https://github.com/user-attachments/assets/310fa9e9-2f07-4721-b557-233506e9681f
+
+This project serves as the gateway of my online identity.
+
+Assets: Copyright © 2026 WQON. All rights reserved.  
 Code: MIT License
