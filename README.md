@@ -5,5 +5,5 @@ https://github.com/user-attachments/assets/310fa9e9-2f07-4721-b557-233506e9681f
 
 This project serves as the gateway of my online identity.
 
-Assets: Copyright © 2026 WQON. All rights reserved.  
-Code: MIT License
+Code: MIT License  
+Assets: Copyright © 2026 WQON. All rights reserved.
