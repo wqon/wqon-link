@@ -1,22 +1,27 @@
 ---
 import config from "../config.json";
+
+const { title, description, canon, theme } = Astro.props;
 ---
 
 <head>
     <meta charset="utf-8" />
-    <title>{config.title}</title>
-    <meta name="description" content={config.description} />
+    <title>{title ?? config.title}</title>
+    <meta name="description" content={description ?? config.description} />
     <meta name="author" content='Lukáš "WQON" Nox' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content={config.theme} />
-    <link rel="canonical" href={config.canon} />
+    <meta name="theme-color" content={theme ?? config.theme} />
+    <link rel="canonical" href={canon ?? config.canon} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={config.og.title} />
-    <meta property="og:description" content={config.og.description} />
+    <meta property="og:title" content={title ?? config.og.title} />
+    <meta
+        property="og:description"
+        content={description ?? config.og.description}
+    />
     <meta property="og:image" content="https://wqon.link/assets/og.png" />
-    <meta property="og:url" content={config.canon} />
+    <meta property="og:url" content={canon ?? config.canon} />
 
     <link
         rel="icon"

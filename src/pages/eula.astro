@@ -1,361 +1,102 @@
 ---
-import config from "../config.json";
+import Doc from "../lib/_doc.astro";
+
+const text = `--------------------------------
+  🔏 END USER LICENSE AGREEMENT (EULA)
+  ----------------
+  Version 1.1
+  Last updated: August 1, 2026
+
+  This Agreement explains how you ("Licensee") may use the WQON ("Licensor") Font Software. By downloading, installing, or using it, you agree to these terms.
+
+
+  1. DEFINITIONS
+  "Font Software" includes all files and assets provided by WQON, including but not limited to:
+  - Vector font files (TTF, OTF)
+  - Web font files (WOFF, WOFF2)
+  - Bitmap or raster font assets (PNG sprite sheets, atlases)
+  - Font metadata and runtime files (JSON, FNT, TXT, or equivalent)
+  - Documentation and supporting materials
+
+  "Individual" means a single user.
+
+  "Entity" means a single company, studio, or team.
+
+  "Company Group" means a parent company and all its subsidiaries.
+
+  "Internal Usage" means use by employees, contractors, or team members working under the same Entity or Company Group within internal projects, workflows, and production pipelines.
+
+
+  2. LICENSE GRANT
+  > WQON grants you a non-exclusive, non-transferable license to use the Font Software.
+  > You may use the Font Software for any personal or commercial purpose, subject to the scope of your license.
+  > The Font Software remains the intellectual property of WQON.
+  This Agreement grants usage rights only. No ownership rights are transferred.
+
+
+  3. LICENSE SCOPE
+  > Commercial License covers use by one Individual.
+  > Studio License covers use by one Entity.
+  > Enterprise License covers use by one Company Group.
+
+  Each Individual, Entity, or Company Group must hold its own valid license.
+
+
+  4. PERMITTED USE
+  You may use the Font Software in unlimited projects, including:
+  - Branding and logo design
+  - Print and digital media
+  - Websites and web applications
+  - Software and mobile applications
+  - Video games and interactive media
+  - Streaming, broadcasting, and video production
+  - Social media and content creation
+  - Commercial and client work
+
+  You retain ownership of any creative works you produce using the Font Software.
+
+
+  5. EMBEDDING
+  Allowed under these conditions:
+  - Web embedding must use WOFF or WOFF2 formats only
+  - Embedded formats must not expose the original Font Software files
+
+
+  6. RESTRICTIONS
+  You may not:
+  - Sell, sublicense, or redistribute the Font Software as a standalone product
+  - Claim ownership of the Font Software
+  - Remove or alter copyright, trademark, or license notices included within the Font Software
+  - Use or share the Font Software beyond the scope of your license and Internal Usage
+  - Use the Font Software for training, generating, or improving machine learning systems
+  - Use the Font Software in connection with blockchain-based collections
+
+
+  7. TERMINATION
+  > This license automatically terminates upon breach of this Agreement.
+  > Upon termination, you must cease all use of the Font Software and delete all copies in your possession.
+
+
+  8. DISCLAIMER
+  > The Font Software is provided "as is" without warranties of any kind.
+  WQON is not liable for any damages arising from its use to the fullest extent permitted by law.
+  > This Agreement is governed by the laws of the Czech Republic.
+  > WQON may provide updates, optimizations, or alternative formats of the Font Software. Such updates remain subject to this Agreement unless otherwise stated.
+  > This document constitutes the entire agreement between you and WQON regarding the Font Software and supersedes any prior versions.
+
+
+  --------
+  Questions?
+  Contact me at hi@wqon.art.
+
+  Copyright © 2026 WQON. All rights reserved.`;
 ---
 
-<!-- Designed & developed with <3 by Lukáš "WQON" Nox. --><!-- For technical details see: https://github.com/wqon/wqon-link -->
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>EULA for WQON Fonts</title>
-        <meta
-            name="description"
-            content="End User License Agreement for font software by WQON."
-        />
-        <meta name="author" content='Lukáš "WQON" Nox' />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content={config.theme} />
-        <link rel="canonical" href="https://wqon.link/eula/" />
-
-        <meta property="og:type" content="website" />
-
-        <link
-            rel="icon"
-            type="image/png"
-            href="/favicon-96x96.png?v=20260518"
-            sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260518" />
-        <link rel="shortcut icon" href="/favicon.ico?v=20260518" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png?v=20260518"
-        />
-        <meta name="apple-mobile-web-app-title" content="WQON" />
-        <link rel="manifest" href="/site.webmanifest?v=20260518" />
-
-        <script src="../lib/noDrag.js"></script>
-        <script src="../lib/killHash.js"></script>
-        <script
-            data-goatcounter="https://stats.wqon.link/count"
-            async
-            src="//gc.zgo.at/count.js"></script>
-        <style>
-            :root {
-                --black: #020226;
-                --darkblue: #161860;
-                --blue: #0c18c0;
-                --violet: #6b5cf5;
-                --softblue: #63abff;
-                --orange: #ffba63;
-                --red: #f96280;
-                --white: #fffaf5;
-                --16: 1rem;
-                --32: 2rem;
-                --48: 3rem;
-                --64: 4rem;
-                --x: 2.6;
-                --y: 2.8;
-                --z: 4;
-            }
-
-            ::selection {
-                background: var(--blue);
-                color: var(--red);
-            }
-            :focus {
-                outline: none;
-            }
-
-            * {
-                width: 100%;
-                max-width: 100svw;
-                height: auto;
-                box-sizing: border-box;
-                scrollbar-color: var(--darkblue) transparent;
-                scroll-behavior: smooth;
-                text-decoration: none;
-                margin: 0;
-                padding: 0;
-            }
-            html {
-                font-size: 16px;
-                font-family: sans-serif;
-                line-height: 1.5;
-                letter-spacing: 0.05rem;
-            }
-            body {
-                background: var(--white);
-                color: var(--black);
-                overflow-x: hidden;
-            }
-            main {
-                white-space: normal;
-                word-break: break-word;
-            }
-
-            section {
-                width: 768px;
-                padding: 32px;
-                margin: 128px auto;
-            }
-            ul {
-                padding-left: 32px;
-            }
-            b {
-                font-weight: 900;
-            }
-
-            h1,
-            h2 {
-                margin-top: 24px;
-            }
-            ul + p {
-                margin-top: 24px;
-            }
-            p + p {
-                margin-top: 24px;
-            }
-
-            a {
-                color: var(--red);
-            }
-        </style>
-    </head>
-
-    <body>
-        <main>
-            <section>
-                <h2>TL;DR (Simple Summary)</h2><p>
-                    This license allows use of WQON fonts in unlimited personal
-                    and commercial projects based on your purchased number of
-                    Seats. You may use the fonts in design, branding, games,
-                    apps, websites, and digital media. Embedding is allowed only
-                    within the rules and formats defined in this license. You do
-                    not own the Font Software — you are licensed to use it.
-                </p>
-                <h1>
-                    WQON FONT SOFTWARE <b>END USER LICENSE AGREEMENT</b> (EULA)
-                </h1><p>
-                    <b>Version 1.0</b><br />
-                    <b>Last updated: May 11, 2026</b>
-                </p>
-                <p>
-                    This Font Software License Agreement (“Agreement”) is a
-                    legal agreement between you (“Licensee”) and <b>WQON</b> (“Licensor”)
-                    governing the use of WQON font software and related assets (“Font
-                    Software”).
-                </p>
-                <p>
-                    By downloading, installing, or using the Font Software, you
-                    agree to this Agreement.
-                </p>
-                <h2>1. Definition of Font Software</h2><p>
-                    “Font Software” includes all files and assets provided by
-                    WQON, including but not limited to:
-                </p><ul>
-                    <li>Vector font files (TTF, OTF)</li>
-                    <li>Web font files (WOFF, WOFF2)</li>
-                    <li>
-                        Bitmap or raster font assets (PNG sprite sheets,
-                        atlases)
-                    </li>
-                    <li>
-                        Font metadata and runtime files (JSON, FNT, TXT, or
-                        equivalent)
-                    </li>
-                    <li>Documentation and supporting materials</li>
-                </ul>
-                <p>
-                    All formats are considered part of a single licensed
-                    product.
-                </p>
-                <h2>2. License Grant</h2><p>
-                    WQON grants you a <b
-                        >non-exclusive, non-transferable, seat-based license</b
-                    > to use the Font Software. A <b>Seat</b> equals one individual
-                    user authorized to use the Font Software. You may use the Font
-                    Software for any personal or commercial purpose, subject to the
-                    number of Seats purchased.
-                </p>
-                <h2>3. Permitted Use</h2><p>
-                    You may use the Font Software in unlimited projects,
-                    including:
-                </p><ul>
-                    <li>Branding and logo design</li>
-                    <li>Print and digital media</li>
-                    <li>Websites and web applications</li>
-                    <li>Software and mobile applications</li>
-                    <li>Video games and interactive media</li>
-                    <li>Streaming, broadcasting, and video production</li>
-                    <li>Social media and content creation</li>
-                    <li>Commercial and client work</li>
-                </ul>
-                <p>
-                    You retain ownership of any creative works you produce using
-                    the Font Software.
-                </p>
-                <h2>4. Internal Use (Legal Entity Rule)</h2><p>
-                    Internal use is limited to a single legal entity
-                    (individual, company, studio, or organization). “Internal
-                    Use” means:
-                </p><ul>
-                    <li>
-                        use by employees, contractors, or team members working
-                        under the same legal entity
-                    </li>
-                    <li>
-                        use within internal projects, workflows, and production
-                        pipelines
-                    </li>
-                </ul>
-                <p>Internal Use does <b>not</b> include:</p><ul>
-                    <li>sharing the Font Software with external parties</li>
-                    <li>
-                        transferring the Font Software to other companies,
-                        clients, or unrelated entities
-                    </li>
-                    <li>
-                        making the Font Software publicly available in any form
-                    </li>
-                </ul>
-                <p>
-                    Contractors may use the Font Software only if they are
-                    assigned a Seat under your license. Each legal entity must
-                    hold its own valid license.
-                </p>
-                <h2>5. Seats (Usage Scope)</h2><p>
-                    Your license is based on Seats:
-                </p><ul>
-                    <li>
-                        1 Seat = 1 individual user. A Seat may be used on
-                        multiple devices by the same user
-                    </li>
-                    <li>
-                        Each Seat represents one active user of the Font
-                        Software
-                    </li>
-                    <li>
-                        Seats may be reassigned within reasonable internal usage
-                    </li>
-                    <li>
-                        Seat reassignment is allowed only for permanent role
-                        changes, not for temporary sharing
-                    </li>
-                    <li>Additional Seats are required for additional users</li>
-                </ul>
-                <p>
-                    You are responsible for ensuring usage does not exceed your
-                    licensed Seats.
-                </p>
-                <h2>6. Embedding & Distribution</h2><p>
-                    Embedding the Font Software is permitted under the following
-                    conditions:
-                </p><ul>
-                    <li>
-                        Web embedding must use <b>WOFF or WOFF2 formats only</b>
-                    </li>
-                    <li>
-                        App, game, and software embedding must use <b
-                            >subsetted or optimized packaged formats provided or
-                            approved by WQON</b
-                        >
-                    </li>
-                    <li>
-                        Bitmap font systems (PNG/JSON/FNT/TXT) may be used only
-                        as part of a licensed product implementation
-                    </li>
-                    <li>
-                        The Font Software must not be distributed as standalone
-                        installable font files (TTF/OTF) outside licensed use
-                    </li>
-                    <li>
-                        Embedded formats should be delivered in a way that
-                        reasonably restricts access to the original Font
-                        Software files
-                    </li>
-                    <li>
-                        Embedding rights apply only within the scope of your
-                        Seats and licensed usage
-                    </li>
-                </ul>
-                <p>
-                    Each deployment or product must remain within the scope of
-                    this Agreement.
-                </p>
-                <h2>7. Restrictions</h2><p>You may not:</p><ul>
-                    <li>
-                        Sell, sublicense, or redistribute the Font Software as a
-                        standalone product
-                    </li>
-                    <li>
-                        Upload raw font files or assets to public repositories
-                        or marketplaces
-                    </li>
-                    <li>Claim ownership of the Font Software</li>
-                    <li>
-                        Create and distribute modified versions of the Font
-                        Software
-                    </li>
-                    <li>
-                        Extract and redistribute bitmap or font assets as
-                        standalone resources
-                    </li>
-                    <li>Share the Font Software outside your licensed Seats</li>
-                    <li>
-                        Use the Font Software beyond your purchased license
-                        scope
-                    </li>
-                    <li>
-                        Use the Font Software in content primarily generated by
-                        artificial intelligence or machine learning systems
-                    </li>
-                    <li>
-                        Use the Font Software for training, generating, or
-                        improving generative AI or machine learning systems
-                    </li>
-                    <li>
-                        Use the Font Software in connection with NFT
-                        collections, blockchain-based assets, or related
-                        promotional materials
-                    </li>
-                </ul>
-                <h2>8. Ownership</h2><p>
-                    The Font Software remains the intellectual property of WQON.
-                    This Agreement grants usage rights only. No ownership rights
-                    are transferred.
-                </p>
-                <h2>9. Updates & Compatibility</h2><p>
-                    WQON may provide updates, optimizations, or alternative
-                    formats of the Font Software. Such updates remain subject to
-                    this Agreement unless otherwise stated.
-                </p>
-                <h2>10. Termination</h2><p>
-                    This license automatically terminates upon breach of this
-                    Agreement. Upon termination, you must cease all use of the
-                    Font Software and delete all copies in your possession.
-                </p>
-                <h2>11. Disclaimer</h2><p>
-                    The Font Software is provided “as is” without warranties of
-                    any kind. WQON is not liable for any damages arising from
-                    its use to the fullest extent permitted by law.
-                </p>
-                <h2>12. Governing Law</h2><p>
-                    This Agreement is governed by the laws of the Czech
-                    Republic.
-                </p>
-                <h2>13. Entire Agreement</h2><p>
-                    This document constitutes the entire agreement between you
-                    and WQON regarding the Font Software and supersedes any
-                    prior versions.
-                </p>
-                <h2>14. Contact</h2><p>
-                    <b>WQON</b><br />
-                    Email: <a href="mailto:hi@wqon.art">hi@wqon.art</a><br />
-                    Website: <u><a href="https://wqon.link/">wqon.link</a></u>
-                </p>
-            </section>
-        </main>
-    </body>
-</html>
+<Doc
+    title="EULA for Fonts by WQON"
+    description="End User License Agreement for pixel fonts by WQON."
+    canon="https://wqon.link/eula/"
+    theme="#020226"
+>
+    {text}
+</Doc>
