@@ -1,4 +1,4 @@
-# Code
+# MIT License (code)
 Copyright 2026 WQON
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -9,3 +9,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 # Assets
 Copyright © 2026 WQON. All rights reserved.
+
+[Red Hat Mono](https://github.com/RedHatOfficial/RedHatFont): Copyright 2024 The Red Hat Project Authors
+[Petrona](https://github.com/RingoSeeber/Petrona): Copyright 2019 The Petrona Project Authors
