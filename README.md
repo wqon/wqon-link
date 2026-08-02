@@ -6,6 +6,6 @@ https://github.com/user-attachments/assets/310fa9e9-2f07-4721-b557-233506e9681f
 This project serves as the gateway of my online identity.
 
 Code: MIT License  
-Assets: Copyright © 2026 WQON. All rights reserved.
-[Red Hat Mono](https://github.com/RedHatOfficial/RedHatFont): Copyright 2024 The Red Hat Project Authors
+Assets: Copyright © 2026 WQON. All rights reserved.  
+[Red Hat Mono](https://github.com/RedHatOfficial/RedHatFont): Copyright 2024 The Red Hat Project Authors  
 [Petrona](https://github.com/RingoSeeber/Petrona): Copyright 2019 The Petrona Project Authors
