@@ -1,8 +1,38 @@
-@font-face {
+@font-face /* minibate */ {
     font-family: minibyte;
     src: url("/assets/minibyte-regular.woff2"), format("woff2");
     font-weight: 400;
     font-style: normal;
     font-feature-settings: "salt";
     font-display: swap;
+}
+
+@font-face /* Red Hat Mono */ {
+    font-family: "Red Hat";
+    src: url("/assets/RedHatMono/RedHatMono-VariableFont_wght.ttf"), format("ttf");
+    font-weight: 100 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+@font-face {
+    font-family: "Red Hat";
+    src: url("/assets/RedHatMono/RedHatMono-Italic-VariableFont_wght.ttf"), format("ttf");
+    font-weight: 100 900;
+    font-style: italic;
+    font-optical-sizing: auto;
+}
+
+@font-face /* Petrona */ {
+    font-family: "Petrona";
+    src: url("/assets/Petrona/Petrona-VariableFont_wght.ttf"), format("ttf");
+    font-weight: 100 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+@font-face {
+    font-family: "Petrona";
+    src: url("/assets/Petrona/Petrona-Italic-VariableFont_wght.ttf"), format("ttf");
+    font-weight: 100 900;
+    font-style: italic;
+    font-optical-sizing: auto;
 }
