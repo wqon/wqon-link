@@ -94,6 +94,9 @@ a {
 :is(a, button):hover .hover {
     display: block;
 }
+a:visited {
+    color: inherit;
+}
 
 input {
     color: var(--blue);
