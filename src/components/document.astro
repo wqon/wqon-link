@@ -3,9 +3,6 @@
 <div class="wn"></div>
 
 <style is:global>
-    * {
-        user-select: text;
-    }
     body {
         background: var(--black);
         color: var(--orange);
@@ -34,11 +31,21 @@
         font-weight: 300;
         font-size: 1.125rem;
         white-space: pre-line;
-        box-shadow: 0 0 96px var(--blue);
         border-radius: calc(1rem / 4);
+        box-shadow: 0 0 96px var(--blue);
+        /* animation: Pulse 1s alternate infinite ease-in-out; */
+        user-select: text;
         padding: 2rem;
         z-index: 8;
     }
+    /* @keyframes Pulse {
+        from {
+            box-shadow: 0 0 48px var(--blue);
+        }
+        to {
+            box-shadow: 0 0 96px var(--blue);
+        }
+    } */
 
     .wn {
         --wn: calc(7px * 4);
