@@ -2,9 +2,10 @@
 import "./global.css";
 import "./fontface.css";
 import Head from "../components/head.astro";
+import Document from "../components/document.astro";
 import Cursor from "../components/cursor.astro";
 
-const { title, description, canon, theme } = Astro.props;
+const { title, description, canon, theme, text } = Astro.props;
 ---
 
 <!-- Designed & developed with <3 by Lukáš "WQON" Nox. --><!--
@@ -14,91 +15,11 @@ const { title, description, canon, theme } = Astro.props;
     <body>
         <main>
             <section>
-                <a class="home" href="/" data-cursor="pointer">back to links</a>
-                <pre>
+                <Document>
                     <slot />
-                </pre>
-                <div class="wn"></div>
+                </Document>
             </section>
         </main>
         <Cursor />
     </body>
 </html>
-
-<style is:inline>
-    * {
-        user-select: text;
-    }
-    body {
-        background: var(--black);
-        color: var(--orange);
-    }
-
-    .home {
-        text-align: center;
-        margin-bottom: var(--32);
-        z-index: 16;
-    }
-    .home:hover {
-        color: var(--white);
-    }
-
-    section {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        margin: var(--64) 0;
-    }
-    pre {
-        width: 768px;
-        background: var(--orange);
-        color: var(--darkblue);
-        font-family: "Petrona", monospace;
-        font-weight: 300;
-        font-size: 1.125rem;
-        white-space: pre-line;
-        box-shadow: 0 0 96px var(--blue);
-        border-radius: calc(1rem / 4);
-        padding: 2rem;
-        z-index: 8;
-    }
-
-    .wn {
-        --wn: calc(7px * 4);
-        mask: url("/assets/wnDarkOC.png") center / cover;
-        width: var(--wn);
-        height: var(--wn);
-        animation: Rainbow 30s linear infinite;
-        image-rendering: pixelated;
-        margin: var(--48) auto 0 auto;
-    }
-    @keyframes Rainbow {
-        100% {
-            background: #e896f8;
-        }
-        85% {
-            background: #f45252;
-        }
-        68% {
-            background: #f29a36;
-        }
-        51% {
-            background: #f2d636;
-        }
-        34% {
-            background: #0edd49;
-        }
-        17% {
-            background: #4e85f4;
-        }
-        0% {
-            background: #e896f8;
-        }
-    }
-
-    @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
-        pre {
-            border-radius: 0;
-        }
-    }
-</style>
