@@ -1,6 +1,6 @@
 <a class="home" href="/" data-cursor="pointer">back to links</a>
 <slot />
-<div class="wn"></div>
+<a class="wn" href="/" data-cursor="pointer"></a>
 
 <style is:global>
     body {
@@ -11,7 +11,7 @@
     .home {
         text-align: center;
         margin-bottom: var(--32);
-        z-index: 16;
+        z-index: 9;
     }
     .home:hover {
         color: var(--white);
@@ -34,8 +34,8 @@
         border-radius: calc(1rem / 4);
         box-shadow: 0 0 96px var(--blue);
         /* animation: Pulse 1s alternate infinite ease-in-out; */
+        padding: var(--48);
         user-select: text;
-        padding: 2rem;
         z-index: 8;
     }
     /* @keyframes Pulse {
@@ -49,12 +49,17 @@
 
     .wn {
         --wn: calc(7px * 4);
+        display: block;
         mask: url("/assets/wnDarkOC.png") center / cover;
         width: var(--wn);
         height: var(--wn);
-        animation: Rainbow 30s linear infinite;
         image-rendering: pixelated;
         margin: var(--48) auto 0 auto;
+        animation: Rainbow 30s linear infinite;
+        transition: transform 0.4s ease-in-out;
+    }
+    .wn:hover {
+        transform: scale(1.125);
     }
     @keyframes Rainbow {
         100% {
@@ -83,6 +88,7 @@
     @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
         pre {
             border-radius: 0;
+            padding: var(--32);
         }
     }
 </style>
