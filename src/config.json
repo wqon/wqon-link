@@ -1,15 +1,15 @@
 {
   "title": "Explore WQON",
-  "description": "A gateway to my world of pixel art, type design and open-source tools.",
+  "description": "Hello, I'm pixel artist, font designer, and coder from Czechia.",
   "theme": "#63abff",
   "canon": "https://wqon.link/",
   "og": {
-    "title": "Discover the pixel‑crafted universe of WQON",
-    "description": "Explore my pixel art, type design, and open‑source tools in one unified gateway."
+    "title": "Discover WQON, a pixel artist, font designer & coder from Czechia.",
+    "description": "Explore my pixelated universe full of dragons, typography, and indie web development."
   },
   "links": [
     {
-      "link": "https://ko-fi.com/wqonart/gallery",
+      "link": "https://wqon.art/",
       "asset": "portfolio.png",
       "alt": "Portfolio (direct link)",
       "blank": false,
@@ -23,25 +23,11 @@
       "active": true
     },
     {
-      "link": "https://wqonart.itch.io/",
-      "asset": "pixel-assets.png",
-      "alt": "Pixel Assets (new tab)",
-      "blank": false,
-      "active": false
-    },
-    {
       "link": "https://www.inprnt.com/gallery/wqonart/",
       "asset": "art-prints.png",
       "alt": "Art Prints (new tab)",
       "blank": true,
       "active": true
-    },
-    {
-      "link": "https://wqon.dev/",
-      "asset": "tools-apps.png",
-      "alt": "Tools & Apps (direct link)",
-      "blank": false,
-      "active": false
     },
     {
       "link": "https://ko-fi.com/wqonart/commissions",
@@ -72,13 +58,6 @@
       "active": true
     },
     {
-      "link": "https://www.tumblr.com/wqonart",
-      "asset": "tumblr.png",
-      "alt": "Tumblr (new tab)",
-      "blank": true,
-      "active": true
-    },
-    {
       "link": "https://lospec.com/wqonart",
       "asset": "lospec.png",
       "alt": "Lospec (new tab)",
@@ -87,6 +66,20 @@
     },
     {
       "link": "https://ko-fi.com/wqonart",
+      "asset": "ko-fi.png",
+      "alt": "Ko-fi (new tab)",
+      "blank": true,
+      "active": true
+    },
+    {
+      "link": "https://patreon.com/wqonart",
+      "asset": "patreon.png",
+      "alt": "Patreon (new tab)",
+      "blank": true,
+      "active": true
+    },
+    {
+      "link": "/drakesjar",
       "asset": "donate.webp",
       "alt": "Feed the Drake’s Jar (direct link)",
       "blank": false,

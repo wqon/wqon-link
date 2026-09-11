@@ -18,29 +18,27 @@ import Subscribe from "../components/subscribe.astro";
     </a>
 </header>
 <nav>
-    {
-        config.links.map((link, i) => (
-            <>
-                {i === 7 && <Subscribe />}
-                {link.active && (
-                    <a
-                        href={link.link}
-                        target={link.blank ? "_blank" : "_self"}
-                        data-cursor="pointer"
-                    >
-                        <img
-                            class="static"
-                            src={`/assets/${link.asset}`}
-                            alt={link.alt}
-                        />
-                        <img
-                            class="hover"
-                            src={`/assets/hover/${link.asset}`}
-                            alt={link.alt}
-                        />
-                    </a>
-                )}
-            </>
-        ))
-    }
+    {config.links.map((link, i) => (
+        <>
+            {i === 5 && <Subscribe />}
+            {link.active && (
+                <a
+                    href={link.link}
+                    target={link.blank ? "_blank" : "_self"}
+                    data-cursor="pointer"
+                >
+                    <img
+                        class="static"
+                        src={`/assets/${link.asset}`}
+                        alt={link.alt}
+                    />
+                    <img
+                        class="hover"
+                        src={`/assets/hover/${link.asset}`}
+                        alt={link.alt}
+                    />
+                </a>
+            )}
+        </>
+    ))}
 </nav>
