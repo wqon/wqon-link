@@ -1,0 +1,33 @@
+---
+import Doc from "../lib/__doc.astro";
+import metadata from "../docs/_meta.json";
+
+export function getStaticPaths() {
+    const docs = import.meta.glob("../docs/*.txt", {
+        eager: true,
+        query: "?raw",
+        import: "default",
+    });
+    return Object.entries(metadata).map(([doc, meta]) => ({
+        params: {
+            doc,
+        },
+        props: {
+            meta,
+            content: docs[`../docs/${doc}.txt`],
+        },
+    }));
+}
+
+const { meta, content } = Astro.props;
+---
+
+<Doc
+    title={meta.title}
+    description={meta.description}
+    canon={meta.canon}
+    noRobots={meta.noRobots}
+    thanks={meta.thanks}
+>
+    <content>{content}</content>
+</Doc>

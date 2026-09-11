@@ -36,7 +36,6 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
-    user-select: none;
     cursor: none;
 }
 html {
@@ -49,6 +48,7 @@ body {
     background: var(--softblue);
     color: var(--darkblue);
     overflow-x: hidden;
+    user-select: none;
 }
 main {
     white-space: normal;

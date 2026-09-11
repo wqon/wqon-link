@@ -1,11 +1,63 @@
-<a class="home" href="/" data-cursor="pointer">back to links</a>
-<slot />
-<a class="wn" href="/" data-cursor="pointer"></a>
+---
+import "./global.css";
+import "./fontface.css";
+import Credit from "../components/credit.astro";
+import Head from "../components/head.astro";
+import Cursor from "../components/cursor.astro";
+
+const { title, description, canon, noRobots, thanks } = Astro.props;
+---
+
+<Credit />
+<html lang="en">
+    <Head
+        title={title}
+        description={description}
+        canon={canon}
+        theme="#020226"
+        noRobots={noRobots}
+    />
+    <body>
+        <main>
+            <aside>
+                <a class="home" href="/" data-cursor="pointer">
+                    back to links
+                </a>
+                {thanks && (
+                    <img
+                        class="thanks"
+                        src="/assets/thanks.webp"
+                        alt="Thanks! <3"
+                    />
+                )}
+            </aside>
+            <section>
+                <pre>
+                    <slot />
+                </pre>
+            </section>
+            <aside>
+                <a class="wn" href="/" data-cursor="pointer"></a>
+            </aside>
+        </main>
+        <Cursor />
+    </body>
+</html>
 
 <style is:global>
     body {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
         background: var(--black);
         color: var(--orange);
+    }
+
+    main {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin: var(--64) 0;
     }
 
     .home {
@@ -17,12 +69,13 @@
         color: var(--white);
     }
 
-    section {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        margin: var(--64) 0;
+    .thanks {
+        width: 100%;
+        padding: 0 var(--96);
+        margin: 0 auto;
+        margin-top: -2rem;
     }
+
     pre {
         width: 768px;
         background: var(--orange);
@@ -34,19 +87,10 @@
         white-space: pre-line;
         border-radius: calc(1rem / 4);
         box-shadow: 0 0 96px var(--blue);
-        /* animation: Pulse 1s alternate infinite ease-in-out; */
         padding: var(--48);
         user-select: text;
         z-index: 8;
     }
-    /* @keyframes Pulse {
-        from {
-            box-shadow: 0 0 48px var(--blue);
-        }
-        to {
-            box-shadow: 0 0 96px var(--blue);
-        }
-    } */
 
     .wn {
         --wn: calc(7px * 4);
@@ -87,6 +131,9 @@
     }
 
     @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
+        .thanks {
+            padding: 0 var(--48);
+        }
         pre {
             border-radius: 0;
             padding: var(--32);

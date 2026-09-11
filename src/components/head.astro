@@ -1,7 +1,7 @@
 ---
 import config from "../config.json";
 
-const { title, description, canon, theme } = Astro.props;
+const { title, description, canon, theme, noRobots } = Astro.props;
 ---
 
 <head>
@@ -13,6 +13,7 @@ const { title, description, canon, theme } = Astro.props;
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content={theme ?? config.theme} />
     <link rel="canonical" href={canon ?? config.canon} />
+    {noRobots && <meta name="robots" content="noindex, nofollow" />}
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title ?? config.og.title} />
@@ -44,10 +45,10 @@ const { title, description, canon, theme } = Astro.props;
     <script
         data-goatcounter="https://stats.wqon.link/count"
         async
-        src="//gc.zgo.at/count.js"></script>
-
+        src="//gc.zgo.at/count.js"
+    ></script>
     <meta name="p:domain_verify" content="81f85dfe2603585b80002f3b31c734ff" />
-    <a rel="me" href="https://mastoart.social/@wqon" style="display: none;"
-        >Mastodon</a
-    >
+    <a rel="me" href="https://mastoart.social/@wqon" style="display: none;">
+        Mastodon
+    </a>
 </head>

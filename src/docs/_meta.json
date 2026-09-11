@@ -1,0 +1,16 @@
+{
+  "thanks": {
+    "title": "Thank You <3",
+    "description": "Donation for WQON was successful. Thank you!",
+    "canon": "https://wqon.link/thanks/",
+    "noRobots": true,
+    "thanks": true
+  },
+  "eula": {
+    "title": "EULA for Fonts by WQON",
+    "description": "End User License Agreement for pixel fonts by WQON.",
+    "canon": "https://wqon.link/eula/",
+    "noRobots": false,
+    "thanks": false
+  }
+}
