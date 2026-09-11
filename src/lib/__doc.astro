@@ -18,6 +18,7 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         noRobots={noRobots}
     />
     <body>
+        <div class="loader"></div>
         <main>
             <aside>
                 <a class="home" href="/" data-cursor="pointer">
@@ -51,6 +52,35 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         place-items: center;
         background: var(--black);
         color: var(--orange);
+    }
+
+    .loader {
+        position: fixed;
+        inset: 0;
+        background: transparent;
+        animation:
+            0.8s ease Fade,
+            1.6s ease-out Filter;
+        z-index: 128;
+    }
+    .loaded {
+        display: none;
+    }
+    @keyframes Fade {
+        from {
+            background: var(--blue);
+        }
+        to {
+            background: transparent;
+        }
+    }
+    @keyframes Filter {
+        from {
+            backdrop-filter: brightness(0%);
+        }
+        to {
+            backdrop-filter: brightness(100%);
+        }
     }
 
     main {
@@ -151,3 +181,11 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         }
     }
 </style>
+
+<script is:inline>
+    window.onload = () => {
+        setTimeout(() => {
+            document.querySelector(".loader").classList.add("loaded");
+        }, 1600);
+    };
+</script>
