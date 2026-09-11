@@ -62,8 +62,7 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
 
     .home {
         text-align: center;
-        margin-bottom: var(--32);
-        z-index: 9;
+        z-index: 4;
     }
     .home:hover {
         color: var(--white);
@@ -73,7 +72,19 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         width: 100%;
         padding: 0 var(--96);
         margin: 0 auto;
-        margin-top: -2rem;
+        z-index: 3;
+    }
+
+    aside {
+        z-index: 2;
+    }
+    section {
+        margin-top: var(--32);
+        margin-bottom: var(--48);
+        z-index: 1;
+    }
+    aside:has(.thanks) + section {
+        margin-top: 0;
     }
 
     pre {
@@ -99,8 +110,8 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         width: var(--wn);
         height: var(--wn);
         image-rendering: pixelated;
-        margin: var(--48) auto 0 auto;
-        animation: Rainbow 30s linear infinite;
+        margin: 0 auto;
+        animation: Rainbow 32s linear infinite;
         transition: transform 0.4s ease-in-out;
     }
     .wn:hover {
