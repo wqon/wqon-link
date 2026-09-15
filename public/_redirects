@@ -3,11 +3,11 @@
 /prints https://www.inprnt.com/gallery/wqonart/ 301
 /join https://wqon.art/join/ 301
 
-/hire-me https://ko-fi.com/wqonart/commissions 301
-/commissions https://ko-fi.com/wqonart/commissions 301
-/comms https://ko-fi.com/wqonart/link/SLAY25 301
-/pixelface https://ko-fi.com/c/5570f3a2b6 301
-/pixelhub https://ko-fi.com/c/d4beefee03 301
+/hire-me /status 302
+/commissions /status 302
+/comms /status 302
+/pixelface /status 302
+/pixelhub /status 302
 
 /support https://wqon.art/support/ 301
 /kofi https://ko-fi.com/wqonart 301
