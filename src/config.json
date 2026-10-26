@@ -30,7 +30,7 @@
       "active": true
     },
     {
-      "link": "https://ko-fi.com/wqonart/commissions",
+      "link": "/status",
       "asset": "commissions.png",
       "alt": "Commissions (direct link)",
       "blank": false,
@@ -76,7 +76,7 @@
       "asset": "patreon.png",
       "alt": "Patreon (new tab)",
       "blank": true,
-      "active": true
+      "active": false
     },
     {
       "link": "/drakesjar",

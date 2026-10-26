@@ -12,5 +12,12 @@
     "canon": "https://wqon.link/eula/",
     "noRobots": false,
     "thanks": false
+  },
+  "status": {
+    "title": "Commissions temporary closed | WQON",
+    "description": "My commissions are closed until I finish my main website.",
+    "canon": "https://wqon.link/status/",
+    "noRobots": false,
+    "thanks": false
   }
 }
