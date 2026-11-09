@@ -1,11 +1,11 @@
 {
-  "title": "Explore WQON",
-  "description": "Hello, I'm pixel artist, font designer, and coder from Czechia.",
+  "title": "WQON (@wqonart)",
+  "description": "Hi! I’m WQON /vickon/, a pixel artist, font designer and coder based in Czechia.",
   "theme": "#63abff",
   "canon": "https://wqon.link/",
   "og": {
-    "title": "Discover WQON, a pixel artist, font designer & coder from Czechia.",
-    "description": "Explore my pixelated universe full of dragons, typography, and indie web development."
+    "title": "Discover WQON /vickon/, a pixel artist, font designer and coder from Czechia.",
+    "description": "Explore my pixelated universe filled with dragons, retro fonts and indie sites."
   },
   "links": [
     {
@@ -76,7 +76,7 @@
       "asset": "patreon.png",
       "alt": "Patreon (new tab)",
       "blank": true,
-      "active": false
+      "active": true
     },
     {
       "link": "/drakesjar",
