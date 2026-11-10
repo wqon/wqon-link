@@ -17,9 +17,9 @@
 
 <style>
     .drake {
-        display: block;
         position: relative;
-        padding-bottom: var(--32);
+        display: block;
+        margin-bottom: var(--32);
     }
     .drake .metadata {
         position: absolute;
@@ -33,7 +33,7 @@
         position: absolute;
         inset: 0;
         opacity: 0;
-        transform: translateX(216%) translateY(176%);
+        translate: 216% 180%;
         transition: opacity 1s ease;
     }
     .drake:hover .bubble {
@@ -45,13 +45,13 @@
         transition-delay: 0.25s;
     }
 
-    @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
+    @media /* mobile */ (max-width: 768px) {
         .drake {
-            padding-bottom: 0;
+            margin-bottom: 0;
         }
         .bubble {
-            width: calc(74px * 1.6);
-            transform: translateX(188%) translateY(176%);
+            width: calc(74px * 1.25);
+            translate: 225% 200%;
         }
     }
 </style>

@@ -7,15 +7,18 @@
     --orange: #ffba63;
     --red: #f96280;
     --white: #fffaf5;
+    --2: 0.125rem;
+    --4: 0.25rem;
+    --8: 0.5rem;
     --16: 1rem;
     --32: 2rem;
     --48: 3rem;
     --64: 4rem;
     --80: 5rem;
     --96: 6rem;
-    --x: 2.6;
-    --y: 2.8;
-    --z: 4;
+    --x: 2.5;
+    --y: 2.75;
+    --z: 3.75;
 }
 
 ::selection {
@@ -45,10 +48,19 @@ html {
     letter-spacing: 0.05rem;
 }
 body {
-    background: var(--softblue);
+    background: var(--black);
     color: var(--darkblue);
     overflow-x: hidden;
     user-select: none;
+    animation: 0s ease 0.5s forwards toBlue;
+}
+@keyframes toBlue {
+    from {
+        background: var(--black);
+    }
+    to {
+        background: var(--softblue);
+    }
 }
 main {
     white-space: normal;
@@ -62,8 +74,8 @@ main {
     grid-template: auto / calc(193px * var(--x)) calc(120px * var(--y));
     justify-content: center;
     align-items: center;
-    gap: var(--64);
-    transform: translateX(calc(0px - var(--64)));
+    gap: var(--32);
+    translate: calc(0px - var(--64)) 0;
 }
 .left {
     grid-column: 1;
@@ -73,7 +85,7 @@ main {
 .right {
     grid-column: 2;
     grid-row: 1;
-    padding: var(--32) 0;
+    margin: var(--32) 0;
     z-index: 2;
 }
 
@@ -125,23 +137,22 @@ button {
         cursor: auto;
     }
 }
-@media /* mobile */ (min-width: 1px) and (max-width: 768px) {
+@media /* mobile */ (max-width: 768px) {
     :root {
-        --y: 2.5;
-        --z: 2.6;
+        --y: 2.375;
+        --z: 2.375;
     }
     .wrapper {
-        grid-template: max-content max-content / calc(120px * var(--y));
-        align-items: normal;
+        grid-template: auto auto / calc(120px * var(--y));
         gap: 0;
-        transform: none;
-        padding: var(--32) 0;
-        padding-bottom: 0;
+        translate: 0;
+        margin: var(--16) 0;
+        margin-bottom: 0;
     }
     .left {
         grid-column: 1;
         grid-row: 2;
-        transform: translateY(calc(0px - var(--32))) !important;
+        translate: 0 calc(0px - var(--80));
     }
     .right {
         grid-column: 1;
@@ -152,18 +163,22 @@ button {
 @media /* tablet */ (min-width: 769px) and (max-width: 1024px) {
     :root {
         --x: 2;
-        --y: 2.2;
-        --z: 3.4;
+        --y: 2.25;
+        --z: 3.25;
     }
     .wrapper {
-        gap: var(--32);
-        transform: translateX(calc(0px - var(--32)));
+        gap: var(--8);
+        translate: calc(0px - var(--32)) 0;
     }
 }
 @media /* notebook */ (min-width: 1025px) and (max-width: 1440px) {
     :root {
-        --x: 2.2;
-        --y: 2.4;
-        --z: 3.6;
+        --x: 2.25;
+        --y: 2.5;
+        --z: 3.5;
+    }
+    .wrapper {
+        gap: var(--16);
+        translate: calc(0px - var(--48)) 0;
     }
 }

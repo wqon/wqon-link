@@ -50,7 +50,7 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         min-height: 100svh;
         display: grid;
         place-items: center;
-        background: var(--black);
+        background: var(--black) !important;
         color: var(--orange);
     }
 
@@ -59,13 +59,15 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         inset: 0;
         background: transparent;
         animation:
-            0.8s ease Fade,
+            0.8s ease-in-out Fade,
             1.6s ease-out Filter;
         z-index: 128;
+        pointer-events: none;
     }
     .loaded {
         display: none;
     }
+
     @keyframes Fade {
         from {
             background: var(--blue);
@@ -96,6 +98,10 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
     }
     .home:hover {
         color: var(--white);
+        translate: 0 -1px;
+    }
+    .home:active {
+        translate: 0 1px;
     }
 
     .thanks {
@@ -144,9 +150,6 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         animation: Rainbow 32s linear infinite;
         transition: transform 0.4s ease-in-out;
     }
-    .wn:hover {
-        transform: scale(1.125);
-    }
     @keyframes Rainbow {
         100% {
             background: #e896f8;
@@ -169,6 +172,12 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         0% {
             background: #e896f8;
         }
+    }
+    .wn:hover {
+        transform: scale(1.125);
+    }
+    .wn:active {
+        translate: 0 var(--2);
     }
 
     @media /* mobile */ (min-width: 1px) and (max-width: 768px) {

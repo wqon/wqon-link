@@ -51,13 +51,6 @@
       "active": true
     },
     {
-      "link": "https://github.com/wqon",
-      "asset": "github.png",
-      "alt": "GitHub (new tab)",
-      "blank": true,
-      "active": true
-    },
-    {
       "link": "https://lospec.com/wqonart",
       "asset": "lospec.png",
       "alt": "Lospec (new tab)",
@@ -65,9 +58,9 @@
       "active": true
     },
     {
-      "link": "https://ko-fi.com/wqonart",
-      "asset": "ko-fi.png",
-      "alt": "Ko-fi (new tab)",
+      "link": "https://github.com/wqon",
+      "asset": "github.png",
+      "alt": "GitHub (new tab)",
       "blank": true,
       "active": true
     },
@@ -75,6 +68,13 @@
       "link": "https://patreon.com/wqonart",
       "asset": "patreon.png",
       "alt": "Patreon (new tab)",
+      "blank": true,
+      "active": true
+    },
+    {
+      "link": "https://ko-fi.com/wqonart",
+      "asset": "ko-fi.png",
+      "alt": "Ko-fi (new tab)",
       "blank": true,
       "active": true
     },
