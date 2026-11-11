@@ -50,15 +50,24 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         min-height: 100svh;
         display: grid;
         place-items: center;
-        background: var(--black) !important;
+        background: var(--blue);
         color: var(--orange);
+        animation: 0s ease 0.125s forwards toBlack;
+    }
+    @keyframes toBlack {
+        from {
+            background: var(--blue);
+        }
+        to {
+            background: var(--black) !important;
+        }
     }
 
     .loader {
         position: fixed;
         inset: 0;
         background: transparent;
-        animation: 0.8s ease-in-out Bluish;
+        animation: 0.8s ease-out 0.125s Bluish;
         z-index: 128;
         pointer-events: none;
     }
@@ -79,7 +88,7 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         align-items: center;
         justify-content: center;
         margin: var(--64) 0;
-        opacity: 1;
+        opacity: 0;
         transform: scale(0.9);
     }
     main.loaded {
@@ -87,7 +96,19 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         transform: none;
         transition:
             0.5s ease-in opacity,
-            3s ease-out transform;
+            0.8s ease-in transform;
+        animation: 0.8s ease-out 0.8s Bounce;
+    }
+    @keyframes Bounce {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.0125);
+        }
+        100% {
+            transform: none;
+        }
     }
 
     .home {
@@ -178,10 +199,18 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         translate: 0 var(--2);
     }
 
-    @media /* mobile */ (min-width: 1px) and (max-width: 768px) {
+    @media /* mobile */ (max-width: 768px) {
+        main {
+            transform: none;
+        }
+        main.loaded {
+            animation: none;
+        }
+
         .thanks {
             padding: 0 var(--48);
         }
+
         pre {
             border-radius: 0;
             padding: var(--32);
