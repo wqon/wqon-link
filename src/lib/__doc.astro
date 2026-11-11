@@ -67,9 +67,9 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         position: fixed;
         inset: 0;
         background: transparent;
-        animation: 0.8s ease-out 0.125s Bluish;
         z-index: 128;
         pointer-events: none;
+        animation: 0.8s ease-out 0.125s Bluish;
     }
     @keyframes Bluish {
         from {
@@ -151,8 +151,8 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         font-size: 0.875rem;
         line-height: 2;
         white-space: pre-line;
+        box-shadow: 0 0 var(--96) var(--blue);
         border-radius: calc(1rem / 4);
-        box-shadow: 0 0 96px var(--blue);
         padding: var(--48);
         user-select: text;
         z-index: 8;
@@ -166,8 +166,8 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         height: var(--wn);
         image-rendering: pixelated;
         margin: 0 auto;
-        animation: Rainbow 32s linear infinite;
         transition: transform 0.4s ease-in-out;
+        animation: Rainbow 32s linear infinite;
     }
     @keyframes Rainbow {
         100% {

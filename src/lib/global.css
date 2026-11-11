@@ -108,6 +108,10 @@ a {
 :is(a, button):hover .hover {
     display: block;
 }
+:is(a, button):active .static,
+:is(a, button):active .hover {
+    translate: 0 calc(1px * var(--y));
+}
 a:visited {
     color: inherit;
 }

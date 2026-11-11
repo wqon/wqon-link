@@ -7,6 +7,19 @@
     "title": "Discover WQON /vickon/, a pixel artist, font designer and coder from Czechia.",
     "description": "Explore my pixelated universe filled with dragons, retro fonts and indie sites."
   },
+  "promo": {
+    "active": true,
+    "links": [
+      {
+        "title": "Link one.",
+        "href": "/link-one"
+      },
+      {
+        "title": "Link two.",
+        "href": "/link-two"
+      }
+    ]
+  },
   "links": [
     {
       "link": "https://wqon.art/",
