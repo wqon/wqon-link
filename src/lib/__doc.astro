@@ -58,17 +58,11 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         position: fixed;
         inset: 0;
         background: transparent;
-        animation:
-            0.8s ease-in-out Fade,
-            1.6s ease-out Filter;
+        animation: 0.8s ease-in-out Bluish;
         z-index: 128;
         pointer-events: none;
     }
-    .loaded {
-        display: none;
-    }
-
-    @keyframes Fade {
+    @keyframes Bluish {
         from {
             background: var(--blue);
         }
@@ -76,13 +70,8 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
             background: transparent;
         }
     }
-    @keyframes Filter {
-        from {
-            backdrop-filter: brightness(0%);
-        }
-        to {
-            backdrop-filter: brightness(100%);
-        }
+    .loader.loaded {
+        display: none;
     }
 
     main {
@@ -90,6 +79,15 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
         align-items: center;
         justify-content: center;
         margin: var(--64) 0;
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    main.loaded {
+        opacity: 1;
+        transform: none;
+        transition:
+            0.5s ease-in opacity,
+            3s ease-out transform;
     }
 
     .home {
@@ -193,8 +191,9 @@ const { title, description, canon, noRobots, thanks } = Astro.props;
 
 <script is:inline>
     window.onload = () => {
+        document.querySelector("main").classList.add("loaded");
         setTimeout(() => {
             document.querySelector(".loader").classList.add("loaded");
-        }, 1600);
+        }, 800);
     };
 </script>
