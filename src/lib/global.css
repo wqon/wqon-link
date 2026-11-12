@@ -156,7 +156,7 @@ button {
     .left {
         grid-column: 1;
         grid-row: 2;
-        translate: 0 calc(0px - var(--80));
+        translate: 0 calc(0px - var(--64));
     }
     .right {
         grid-column: 1;
